@@ -37,12 +37,12 @@ function draw() {
   // 先顯示攝影機畫面
   image(video, 0, 0, width, height);
 
-  // 再顯示標題
+  // 顯示標題（置中，字型大小32）
   fill(0);
   textFont(font);
-  textSize(40);
-  textAlign(CENTER);
-  text("淡江教育科技系", width / 2, 40);
+  textSize(32);
+  textAlign(CENTER, TOP);
+  text("淡江教育科技系", width / 2, 20);
 
   // Display video and detect index and thumb position
   if (hands.length > 0) {
