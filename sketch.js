@@ -23,11 +23,12 @@ function setup() {
   video = createCapture(VIDEO, {flipped: true});
   video.hide();
   handPose.detectStart(video, gotHands);
-  
+
   // Create magnet objects
   rectMode(CENTER);
-  for (let i=0; i<num; i++) {
-    magnets[i] = new Magnet();
+  for (let i = 0; i < num; i++) {
+    let randomChar = String.fromCharCode(65 + floor(random(26))); // 產生 A~Z
+    magnets[i] = new Magnet(randomChar);
   }
 }
 
