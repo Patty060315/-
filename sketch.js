@@ -34,7 +34,7 @@ function setup() {
 function draw() {
   background(220);
 
-  // 顯示標題文字於畫面上方中央
+  textFont(font); // 加這一行，確保使用正確字型
   textAlign(CENTER, TOP);
   textSize(24);
   fill(0);
