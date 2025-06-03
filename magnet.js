@@ -1,5 +1,5 @@
 // 先產生原本的字卡
-let textMagnets = ["hello", "hiii", "sweet", "pattvira"];
+let textMagnets = ["hello", "hiii", "sweet", "pattvira", "T", "K", "U", "E", "T"];
 
 // 隨機產生5個A~Z的大寫英文字母
 for (let i = 0; i < 5; i++) {
