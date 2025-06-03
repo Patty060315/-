@@ -34,15 +34,17 @@ function setup() {
 function draw() {
   background(220);
 
-  // 顯示標題
+  // 先顯示攝影機畫面
+  image(video, 0, 0, width, height);
+
+  // 再顯示標題
   fill(0);
   textFont(font);
   textSize(40);
   textAlign(CENTER);
-  text("淡江教育科技系", width / 2, 20);
+  text("淡江教育科技系", width / 2, 40);
 
   // Display video and detect index and thumb position
-  image(video, 0, 0, width, height);
   if (hands.length > 0) {
     let index = hands[0].keypoints[8];
     let thumb = hands[0].keypoints[4];
