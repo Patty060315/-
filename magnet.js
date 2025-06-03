@@ -2,7 +2,8 @@ let textMagnets = ["hello", "hiii", "sweet", "pattvira"];
 
 class Magnet {
   constructor() {
-    this.t = random(textMagnets);
+    // 隨機產生一個大寫英文字母
+    this.t = String.fromCharCode(65 + floor(random(26)));
     this.x = random(width);
     this.y = random(height);
     this.angle = random(TWO_PI);
