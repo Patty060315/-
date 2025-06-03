@@ -33,7 +33,13 @@ function setup() {
 
 function draw() {
   background(220);
-  
+
+  // 顯示標題文字於畫面上方中央
+  textAlign(CENTER, TOP);
+  textSize(24);
+  fill(0);
+  text("淡江教育科技系", width / 2, 10);
+
   // Display video and detect index and thumb position
   image(video, 0, 0, width, height);
   if (hands.length > 0) {
