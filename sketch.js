@@ -33,24 +33,31 @@ function setup() {
 
 function draw() {
   background(220);
-  
+
+  // 顯示標題
+  fill(0);
+  textFont(font);
+  textSize(40);
+  textAlign(CENTER, TOP);
+  text("淡江教育科技系", width / 2, 20);
+
   // Display video and detect index and thumb position
   image(video, 0, 0, width, height);
   if (hands.length > 0) {
     let index = hands[0].keypoints[8];
     let thumb = hands[0].keypoints[4];
-    
+
     noFill();
     stroke(0, 255, 0);
     text("index", index.x, index.y);
     text("thumb", thumb.x, thumb.y);
-  
-    for (let i=0; i<num; i++) {
+
+    for (let i = 0; i < num; i++) {
       magnets[i].touch(thumb.x, thumb.y, index.x, index.y);
     }
   }
-  
-  for (let i=0; i<num; i++) {
+
+  for (let i = 0; i < num; i++) {
     magnets[i].display();
   }
 }
