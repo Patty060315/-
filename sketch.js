@@ -18,7 +18,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(640, 480);
+  createCanvas(800, 600); // 改為 800*600
   // Detect video & load ML model
   video = createCapture(VIDEO, {flipped: true});
   video.hide();
@@ -33,7 +33,8 @@ function setup() {
 
 function draw() {
   background(220);
-
+  
+  // Display video and detect index and thumb position
   image(video, 0, 0, width, height);
   if (hands.length > 0) {
     let index = hands[0].keypoints[8];
@@ -52,13 +53,6 @@ function draw() {
   for (let i=0; i<num; i++) {
     magnets[i].display();
   }
-
-  // 把這段移到最後，確保文字在最上層
-  // textFont(font); // 先註解這行
-  textAlign(CENTER, TOP);
-  textSize(24);
-  fill(0);
-  text("淡江教育科技系", width / 2, 10);
 }
 
 function gotHands(results) {
