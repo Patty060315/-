@@ -54,7 +54,7 @@ function draw() {
   }
 
   // 把這段移到最後，確保文字在最上層
-  textFont(font);
+  // textFont(font); // 先註解這行
   textAlign(CENTER, TOP);
   textSize(24);
   fill(0);
