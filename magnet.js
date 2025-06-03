@@ -1,11 +1,5 @@
-// 先產生原本的字卡
-let textMagnets = ["hello", "hiii", "sweet", "pattvira", "T", "K", "U", "E", "T"];
-
-// 隨機產生5個A~Z的大寫英文字母
-for (let i = 0; i < 5; i++) {
-  let letter = String.fromCharCode(65 + floor(random(26)));
-  textMagnets.push(letter);
-}
+// 只產生指定的五個字卡
+let textMagnets = ["T", "k", "u", "e", "t"];
 
 class Magnet {
   constructor() {
