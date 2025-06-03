@@ -34,13 +34,6 @@ function setup() {
 function draw() {
   background(220);
 
-  textFont(font); // 加這一行，確保使用正確字型
-  textAlign(CENTER, TOP);
-  textSize(24);
-  fill(0);
-  text("淡江教育科技系", width / 2, 10);
-
-  // Display video and detect index and thumb position
   image(video, 0, 0, width, height);
   if (hands.length > 0) {
     let index = hands[0].keypoints[8];
@@ -59,6 +52,13 @@ function draw() {
   for (let i=0; i<num; i++) {
     magnets[i].display();
   }
+
+  // 把這段移到最後，確保文字在最上層
+  textFont(font);
+  textAlign(CENTER, TOP);
+  textSize(24);
+  fill(0);
+  text("淡江教育科技系", width / 2, 10);
 }
 
 function gotHands(results) {
