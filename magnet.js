@@ -1,16 +1,28 @@
-// 只產生指定的五個字卡
-let textMagnets = ["T", "k", "u", "e", "t"];
+// 只產生指定的五個字卡，並指定靠近中間的座標
+let textMagnets = [
+  { t: "T", x: 320, y: 280 },
+  { t: "k", x: 360, y: 320 },
+  { t: "u", x: 400, y: 280 },
+  { t: "e", x: 440, y: 320 },
+  { t: "t", x: 480, y: 280 }
+];
+
+let magnetIndex = 0;
 
 class Magnet {
   constructor() {
-    this.t = random(textMagnets);
-    this.x = random(width);
-    this.y = random(height);
+    // 依序取用每個字卡與位置
+    let data = textMagnets[magnetIndex % textMagnets.length];
+    this.t = data.t;
+    this.x = data.x;
+    this.y = data.y;
+    magnetIndex++;
+
     this.angle = random(TWO_PI);
     this.c = color(255);
 
     this.bbox = font.textBounds(this.t, this.x, this.y, size);
-    this.pos = createVector(this.x, this.y); // 修正為隨機位置
+    this.pos = createVector(this.x, this.y);
     this.w = this.bbox.w;
     this.h = this.bbox.h;
 
