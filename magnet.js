@@ -1,5 +1,13 @@
-// 只產生指定的五個字卡
-let textMagnets = ["T", "k", "u", "e", "t"];
+// 只產生指定的五個字卡，位置隨機但靠近畫面中心（±100px）
+let centerX = 400; // 畫面中心 x
+let centerY = 300; // 畫面中心 y
+let textMagnets = [
+  { t: "T", x: centerX + random(-100, 100), y: centerY + random(-100, 100) },
+  { t: "k", x: centerX + random(-100, 100), y: centerY + random(-100, 100) },
+  { t: "u", x: centerX + random(-100, 100), y: centerY + random(-100, 100) },
+  { t: "e", x: centerX + random(-100, 100), y: centerY + random(-100, 100) },
+  { t: "t", x: centerX + random(-100, 100), y: centerY + random(-100, 100) }
+];
 
 let magnetIndex = 0;
 
