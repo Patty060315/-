@@ -38,7 +38,7 @@ function draw() {
   fill(0);
   textFont(font);
   textSize(40);
-  textAlign(CENTER, TOP);
+  textAlign(CENTER);
   text("淡江教育科技系", width / 2, 20);
 
   // Display video and detect index and thumb position
